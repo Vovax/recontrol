@@ -3,6 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Space</title>
+    <style>
+        .svg-wrapper {
+            height: 0px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+        }
+        
+        .shape {
+            fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 8px;
+            stroke: black;
+        }
+        
+        .text {
+            color: purple;
+            font-family: 'Roboto Condensed';
+            font-size: 22px;
+            letter-spacing: 8px;
+            line-height: 32px;
+            position: relative;
+            top: -48px;
+            left: 70px;
+        }
+        
+        @keyframes draw {
+            0% {
+                stroke-dasharray: 140 540;
+                stroke-dashoffset: -474;
+                stroke-width: 8px;
+              }
+            100% {
+                stroke-dasharray: 760;
+                stroke-dashoffset: 0;
+                stroke-width: 2px;
+            }
+        }
+        
+        .svg-wrapper:hover .shape {
+            -webkit-animation: 0.5s draw linear forwards;
+            animation: 0.5s draw linear forwards;
+        }
+        .collection{
+            position: relative;
+            top: 30px;
+            left: 70px;
+        }
+    </style>
 </head>
 <body style="margin: 0px">
     <header class="header">
@@ -10,10 +62,10 @@
             <div class="logo"><img alt="logo" src='/css/img/space-logo.png'></div>
             <div class="links">
                 <center>
-                    <a href="" style="color: white; text-decoration: none">Новини</a>
-                    <a href="#" style="color: white; text-decoration: none">Астрономія</a>
-                    <a href="#" style="color: white; text-decoration: none">Статті</a>
-                    <a href="#" style="color: white; text-decoration: none">Технології</a>
+                    <a href="" style="color: white; text-decoration: none">News</a>
+                    <a href="#" style="color: white; text-decoration: none">Astronomy</a>
+                    <a href="#" style="color: white; text-decoration: none">Articles</a>
+                    <a href="#" style="color: white; text-decoration: none">Tech</a>
                 </center>
             </div>
             <form>
@@ -22,27 +74,35 @@
                     <input type="submit" value="Пошук">
                 </p>
             </form>
+        </div>
     </header>
     <main id="content">
         <center><h1><i>Space Lights</i></h1></center>
         <center>
             <iframe width="454" height="280" src="https://www.youtube.com/embed/i1ppEg7LTFc?ecver=1" frameborder="0" allowfullscreen></iframe>
         </center>
+        <div class="svg-wrapper">
+            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                <rect class="shape" height="60" width="320" />
+            </svg>
+            <div class="text">Into Space</div>
+        </div>
         <div class="collection">
-            <h2><mark>Images of this Week</mark></h1>
+            <h2><strong>Images of this Week</strong></h1>
             <div class="gallery">
                 <h3><i>Image of the day</i></h3>
                 <img alt="Image 1" src='/css/img/content/image1.jpeg' style='width: 300px'>
-                <p><big><i>Sunday, February 6, 2017</i></big></p>
+                <p><i>Sunday, February 6, 2017</i></p>
             </div>
             <div class="gallery">
                 <h3><i>Image of the day</i></h3>
                 <img alt="Image 3" src='/css/img/content/image3.jpg' style='width: 300px'>
-                <p><big><i>Monday, February 13, 2017</i></big></p>
+                <p><i>Monday, February 13, 2017</i></p>
             </div>
+        </div>
         <div class="audio">
             <center>
-                <h3><i>Shuttle Audio</i></i></h3>
+                <h3><i>Shuttle Audio</i></h3>
                 <img alt="Audio Img" src='/css/img/content/audio-bg.jpg' style='width: 300px'>
                 <p>
                     <audio controls>
@@ -52,7 +112,11 @@
                         <source src="/css/audio/nasa.wav" type="audio/wav">
                     </audio>
                 </p>
-                <h3><i>Shuttle Video</i></i></h3>
+            </center>
+        </div>
+        <div class="video">
+            <center>
+                <h3><i>Shuttle Video</i></h3>
                 <p>
                     <video width="400" autoplay>
                         <source src="/css/video/nasa.mp4" type="video/mp4">
@@ -64,8 +128,9 @@
                 <p>“I believe in a hundred years we are going to be repairing the damage we are doing now,” 
                 <br> says astrobiologist and "Earth In Human Hands”  author David Grinspoon in regards to Earth’s changing climate. 
                 <br> He gives his opinion on the path the United States may be going under the Trump administration and the affect 
-                <br> it is having on the space/science community in this conversation with Space.com’s <a href="https://twitter.com/stevespaleta" style="text-decoration: none"><i>@SteveSpaleta.</i></a></p>
+                <br> it is having on the space/science community in this conversation with <mark>Space.com’s</mark> <a href="https://twitter.com/stevespaleta" style="text-decoration: none"><i>@SteveSpaleta.</i></a></p>
             </center>
+        </div>
     </main>
     <footer style="background-color: grey">
         <div class="all-rights"><center>© 2012-2016 Space</center></div>
